@@ -1,0 +1,80 @@
+/* CSS stilark for vietnamesisk ordbok. */
+/* Made by Tone Merete Bruvik, 2008 */
+/* Last changed: 2008-01-31 */
+
+body		{ 
+		font-family: Arial, Helvetica, sans-serif;
+		/*font-size: medium;*/
+		margin-top: 20px;
+		margin-right: 35px; 
+		margin-left: 35px;
+		margin-bottom: 20px; 
+     		}
+     		
+pre {
+  font-size: small;
+}
+
+
+.entry {
+ /* font-size: medium;*/
+  }
+  
+.textgar {
+  font-size: small;
+}
+
+/* PRINT */
+
+@media print {
+  
+table.fragmenttabell {
+  font-size: small;
+  vertical-align: top;
+}
+
+td.tabellCelle {
+  font-size: small;
+  vertical-align: top;
+}
+
+tr.oddRad {
+  vertical-align: top;
+}
+
+tr.jamnRad {
+  vertical-align: top;
+}
+
+.note {
+  font-size: small;
+  vertical-align: bottom;
+}
+
+.numCelle {
+  font-size: small;
+  vertical-align: bottom;
+  float: right;
+}
+
+.numCelleAreal {
+  font-size: small;
+  vertical-align: bottom;
+  color: blue;
+}
+
+.innledning {
+  font-size: small;
+  vertical-align: bottom;
+  float: right;
+  padding-left: 10px;
+}
+
+}
+/* END */
+
+
+
+
+
+

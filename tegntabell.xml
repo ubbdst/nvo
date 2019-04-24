@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chartable>
+	<item><URLtegn>%20</URLtegn><UTF8> </UTF8></item>
+	
+	<item><URLtegn>+</URLtegn><UTF8> </UTF8></item>
+	<item><URLtegn>%C3%A6</URLtegn><UTF8>æ</UTF8></item>
+	<item><URLtegn>%C3%B8</URLtegn><UTF8>ø</UTF8></item>
+	<item><URLtegn>%C3%A5</URLtegn><UTF8>å</UTF8></item>
+	<item><URLtegn>%C3%86</URLtegn><UTF8>Æ</UTF8></item>
+	<item><URLtegn>%C3%98</URLtegn><UTF8>Ø</UTF8></item>
+	<item><URLtegn>%C3%85</URLtegn><UTF8>Å</UTF8></item>
+	
+	<item><URLtegn>%C3%A1</URLtegn><UTF8>á</UTF8></item>
+	<item><URLtegn>%C3%A0</URLtegn><UTF8>à</UTF8></item>
+	<item><URLtegn>%E1%BA%A1</URLtegn><UTF8>ạ</UTF8></item>
+	<item><URLtegn>%C4%83</URLtegn><UTF8>ă</UTF8></item>
+	<item><URLtegn>%E1%BA%AB</URLtegn><UTF8>ẫ</UTF8></item>
+	<item><URLtegn>%E1%BA%A7</URLtegn><UTF8>ầ</UTF8></item>
+	<item><URLtegn>%E1%BA%A5</URLtegn><UTF8>ấ</UTF8></item>
+	<item><URLtegn>%E1%BA%AB</URLtegn><UTF8>ậ</UTF8></item>
+	<item><URLtegn>%E1%BA%A3</URLtegn><UTF8>ả</UTF8></item>
+	
+	<item><URLtegn>%C4%90</URLtegn><UTF8>Đ</UTF8></item>
+	<item><URLtegn>%C4%91</URLtegn><UTF8>đ</UTF8></item>
+	
+	<item><URLtegn>%E1%BB%87</URLtegn><UTF8>ệ</UTF8></item>
+	<item><URLtegn>%C3%AA</URLtegn><UTF8>ê</UTF8></item>
+	<item><URLtegn>%C3%A8</URLtegn><UTF8>è</UTF8></item>
+	<item><URLtegn>%E1%BA%BF</URLtegn><UTF8>ế</UTF8></item>
+	<item><URLtegn>%E1%BB%81</URLtegn><UTF8>ề</UTF8></item>
+	<item><URLtegn>%E1%BB%83</URLtegn><UTF8>ể</UTF8></item>
+	<item><URLtegn>%E1%BA%BB</URLtegn><UTF8>ẻ</UTF8></item>
+	
+	
+	<item><URLtegn>%C4%A9</URLtegn><UTF8>ĩ</UTF8></item>
+	<item><URLtegn>%E1%BB%8B</URLtegn><UTF8>ị</UTF8></item>
+	
+	<item><URLtegn>%C3%AD</URLtegn><UTF8>í</UTF8></item>
+	
+	<item><URLtegn>%E1%BB%9B</URLtegn><UTF8>ớ</UTF8></item>
+	<item><URLtegn>%E1%BB%9D</URLtegn><UTF8>ờ</UTF8></item>
+	<item><URLtegn>%E1%BB%91</URLtegn><UTF8>ố</UTF8></item>
+	<item><URLtegn>%E1%BB%A3</URLtegn><UTF8>ợ</UTF8></item>
+	<item><URLtegn>%E1%BB%99</URLtegn><UTF8>ộ</UTF8></item>
+	<item><URLtegn>%C6%A1</URLtegn><UTF8>ơ</UTF8></item>
+	
+	
+	<item><URLtegn>%C6%B0</URLtegn><UTF8>ư</UTF8></item>
+	<item><URLtegn>%E1%BB%AF</URLtegn><UTF8>ữ</UTF8></item>
+	<item><URLtegn>%E1%BB%AB</URLtegn><UTF8>ừ</UTF8></item>
+	<item><URLtegn>%E1%BB%B1</URLtegn><UTF8>ự</UTF8></item>
+	<item><URLtegn>%E1%BB%A5</URLtegn><UTF8>ụ</UTF8></item>
+	<item><URLtegn>%E1%BB%A9</URLtegn><UTF8>ứ</UTF8></item>
+	<item><URLtegn>%C3%BA</URLtegn><UTF8>ú</UTF8></item>
+	<item><URLtegn>%E1%BB%8F</URLtegn><UTF8>ỏ</UTF8></item>
+	<item><URLtegn>%E1%BB%8D</URLtegn><UTF8>ọ</UTF8></item>
+	<item><URLtegn>%E1%BB%93</URLtegn><UTF8>ồ</UTF8></item>
+	<item><URLtegn>%E1%BB%89</URLtegn><UTF8>ỉ</UTF8></item>
+	<item><URLtegn>%E1%BA%AF</URLtegn><UTF8>ắ</UTF8></item>
+	<item><URLtegn>%E1%BB%AD</URLtegn><UTF8>ử</UTF8></item>
+	<item><URLtegn>%C3%B4</URLtegn><UTF8>ô</UTF8></item>
+	<item><URLtegn>%C3%81</URLtegn><UTF8>Á</UTF8></item>
+	<item><URLtegn>%E1%BA%B7</URLtegn><UTF8>ặ</UTF8></item>
+	<item><URLtegn>%C3%A3</URLtegn><UTF8>ã</UTF8></item>
+	<item><URLtegn>%C3%B3</URLtegn><UTF8>ó</UTF8></item>
+	<item><URLtegn>%C5%A9</URLtegn><UTF8>ũ</UTF8></item>
+	<item><URLtegn>%C3%BD</URLtegn><UTF8>ý</UTF8></item>
+	<item><URLtegn>%E1%BB%97</URLtegn><UTF8>ỗ</UTF8></item>
+	<item><URLtegn>%E1%BB%9F</URLtegn><UTF8>ở</UTF8></item>
+	<item><URLtegn>%C3%B2</URLtegn><UTF8>ò</UTF8></item>
+	<item><URLtegn>%E1%BB%A1</URLtegn><UTF8>ỡ</UTF8></item>
+	<item><URLtegn>%E1%BA%AD</URLtegn><UTF8>ậ</UTF8></item>
+	<item><URLtegn>%C3%A2</URLtegn><UTF8>â</UTF8></item>
+	<item><URLtegn>%E1%BA%B1</URLtegn><UTF8>ằ</UTF8></item>
+	<item><URLtegn>%E1%BB%95</URLtegn><UTF8>ổ</UTF8></item>
+	<item><URLtegn>%E1%BB%A7</URLtegn><UTF8>ủ</UTF8></item>
+	<item><URLtegn>%C3%AC</URLtegn><UTF8>ì</UTF8></item>
+	<item><URLtegn>%C3%A9</URLtegn><UTF8>é</UTF8></item>
+	<item><URLtegn>%E1%BA%B3</URLtegn><UTF8>ẳ</UTF8></item>
+	<item><URLtegn></URLtegn><UTF8></UTF8></item>
+	<item><URLtegn></URLtegn><UTF8></UTF8></item>
+	<item><URLtegn></URLtegn><UTF8></UTF8></item>
+	<item><URLtegn></URLtegn><UTF8></UTF8></item>
+	<item><URLtegn></URLtegn><UTF8></UTF8></item>
+	<item><URLtegn></URLtegn><UTF8></UTF8></item>
+	<item><URLtegn></URLtegn><UTF8></UTF8></item>
+	<item><URLtegn></URLtegn><UTF8></UTF8></item>
+	<item><URLtegn></URLtegn><UTF8></UTF8></item>
+	<item><URLtegn></URLtegn><UTF8></UTF8></item>
+	<item><URLtegn></URLtegn><UTF8></UTF8></item>
+</chartable>
+
