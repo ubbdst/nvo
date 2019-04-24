@@ -42,7 +42,7 @@
             domain = window.location.href.slice(0, window.location.href.indexOf('?'));
             param = window.location.href.slice(window.location.href.indexOf('?') + 1);
           }
-          xsltProcessor.setParameter(null, "DOCUMENT_NAME", "/~oystein/nor-viet-ordbok/test/transform.html");
+          xsltProcessor.setParameter(null, "DOCUMENT_NAME", "/nvo/transform.htm");
           xsltProcessor.setParameter(null, "QPI", param);
           xsltProcessor.setParameter(null, "DOCUMENT_URL", domain + "?" + param);
 

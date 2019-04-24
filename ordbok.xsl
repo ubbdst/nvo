@@ -17,7 +17,7 @@
 <!ENTITY rdquo  "&#x201D;">
 <!ENTITY aksis_sti "http://www.aksis.uib.no" >
 <!ENTITY nbsp " " >
-<!ENTITY gandalf_sti "http://clu.uni.no" >
+<!ENTITY gandalf_sti "https://ubbdst.github.io" >
 ]>
 <!-- 2015-05-07, -08
 changed from gandalf.uib.no. didn't help the ÆØÅ problem.
