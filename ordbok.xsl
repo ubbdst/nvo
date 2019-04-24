@@ -25,8 +25,8 @@ perhaps .htaccess helped for the chapter links.
 ###conclusion: the document() function can't access the tegntabell.xml file, which is needed to convert uri-encoded characters in the search string.
 ###found a way to include the character table in this stylesheet. look for namespace 'my'
 -->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="3.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-xmlns:my="my:my" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+xmlns:my="my:my">
     
     
 <xsl:output method="html" doctype-public="-//W3C/DTD XHTML 1.0 STRICT//EN" doctype-system="http:://www.w3.org/TR/xhtml1-strict.dtd" encoding="UTF-8"></xsl:output>
@@ -170,7 +170,6 @@ xmlns:my="my:my" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 <!-- This template writes the entire document into an HTML page -->
 
 <xsl:template match="/">
-	<xsl:result-document href="#main">
     <xsl:element name="html">
         <xsl:element name="head">
             <xsl:element name="title">
@@ -320,9 +319,8 @@ xmlns:my="my:my" xmlns:xs="http://www.w3.org/2001/XMLSchema">
             </xsl:element>
         </xsl:element>
     </xsl:element>
-	</xsl:result-document>
 </xsl:template>
-	
+
 	<xsl:template match="tei:teiHeader">
 		<h3><xsl:apply-templates select="//tei:title"/></h3>
 		<xsl:element name="div">
@@ -1085,7 +1083,7 @@ xmlns:my="my:my" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 		<!--2008.04.11 TMB: Finne ført ut for mange ulike betyedlinger det er, enklest å finne det ut ved å se på SISTE element av typen 
 			<cit type="translation" xml:lang="vi">, da er antall betydlinger lik mellomsifferet i rend-verdien, f.eks. 9 (8+1), for rend="V285-h" -->
 		<xsl:variable name="kladd"><xsl:value-of select="tei:cit[attribute::type='translation' and substring(attribute::rend,1,2)='V2'][position()=last()]/attribute::rend"/></xsl:variable>
-		<xsl:variable name="antBetydninger"><xsl:value-of select="1 + xs:integer(substring($kladd, 3,1))"/></xsl:variable>		
+		<xsl:variable name="antBetydninger"><xsl:value-of select="1 + substring($kladd, 3,1)"/></xsl:variable>		
 		<!--(foreløpig note: Antall betydninger = <xsl:value-of select="$antBetydninger"/>) <br/>-->
   	
 		<xsl:call-template name="betydning">
