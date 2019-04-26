@@ -35,7 +35,7 @@
           xslDoc.async = false;
           xslDoc.load("ordbok.xsl");
             if (xslDoc.parseError.errorCode != 0) {
-         var myErr = xsldoc.parseError;
+         var myErr = xslDoc.parseError;
          alert("You have error " + myErr.reason);
          
      } else {
