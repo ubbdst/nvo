@@ -38,9 +38,11 @@
           xslproc = xslt.createProcessor();
           xslproc.addParameter("DOCUMENT_NAME","/nvo/index.html");
           xslproc.addParameter("QPI",param);
-          xslproc.addParameter("DOCUMENT_URL",domain + "?" + param);   
+          xslproc.addParameter("DOCUMENT_URL",domain + "?" + param);
+          xslproc.input(xml);
+          xslProc.transform();
           var res = xslproc.transformToFragment(xml,document);
-          document.getElementById("main").innerHTML = res;
+          document.getElementById("main").innerHTML = xslproc.output;
         }
         else if (document.implementation && document.implementation.createDocument){
           // code for Chrome, Firefox, Opera, etc.
