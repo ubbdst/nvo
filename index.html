@@ -35,11 +35,12 @@
           var xslt = new ActiveXObject("Msxml2.XSLTemplate.6.0");
           xslt.stylesheet = xsl;
           var xmlDoc = new ActiveXObject("Msxml2.XSLTemplate.6.0");
-          
-          xslt.addParameter("DOCUMENT_NAME","/nvo/index.html");
-          xslt.addParameter("QPI",param);
-          xslt.addParameter("DOCUMENT_URL",domain + "?" + param);   
-          var res = xslt.transformToFragment(xml,document);
+          var xslproc;  
+          xslproc = xslt.createProcessor();  
+          xslproc.addParameter("DOCUMENT_NAME","/nvo/index.html");
+          xslproc.addParameter("QPI",param);
+          xslproc.addParameter("DOCUMENT_URL",domain + "?" + param);   
+          var res = xslproc.transformToFragment(xml,document);
           document.getElementById("main").innerHTML = res;
         }
         else if (document.implementation && document.implementation.createDocument){
