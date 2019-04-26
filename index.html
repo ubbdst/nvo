@@ -32,14 +32,14 @@
     ("ActiveXObject" in window)) {
           var xslDoc = new ActiveXObject("Msxml2.DOMDocument.6.0");
           xslDoc.async = false;
-          xslDoc.load("/nvo/ordbok.xsl");
+          xslDoc.loadXML("/nvo/ordbok.xsl");
           var xslt = new ActiveXObject("Msxml2.XSLTemplate.6.0");
           var xslproc;
           xslt.stylesheet = xslDoc;
           
           var xmlDoc = new ActiveXObject("Msxml2.DOMDocument.6.0");  
           xmlDoc.async = false;  
-          xmlDoc.load("/nvo/index.xml");  
+          xmlDoc.loadXML("/nvo/index.xml");  
 
           xslproc = xslt.createProcessor();
           xslproc.addParameter("DOCUMENT_NAME","/nvo/index.html");
