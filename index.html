@@ -41,6 +41,7 @@
           xslproc.addParameter("DOCUMENT_URL",domain + "?" + param);
           xslproc.input= xml;
           xslproc.transform();
+          console.log("hello");
           document.getElementById("main").appendChild(xslproc.output);
 
         }
