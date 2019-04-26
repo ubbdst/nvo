@@ -20,7 +20,6 @@
 
       function displayResult() {
         xml = loadXMLDoc("index.xml");
-        xsl = loadXMLDoc("ordbok.xsl");
         
         pos = window.location.href.indexOf('?');
           if (pos == -1) {
@@ -34,9 +33,11 @@
         if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
           var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.6.0");  
           xslDoc.load("ordbok.xsl");
+          
           var xslt = new ActiveXObject("Msxml2.XSLTemplate.6.0");
           var xslproc;
           xslt.stylesheet = xslDoc;
+          
           var xmlDoc = new ActiveXObject("Msxml2.DOMDocument.6.0");  
           xmlDoc.async = false;  
           xmlDoc.load("index.xml");  
