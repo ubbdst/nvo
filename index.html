@@ -40,7 +40,7 @@
           xslproc.addParameter("QPI",param);
           xslproc.addParameter("DOCUMENT_URL",domain + "?" + param);
           xslproc.input= xml;
-          xslProc.transformNode();
+          xslproc.transformNode();
          console.log(xslproc.output);
           document.getElementById("main").innerHTML = xslproc.output;
         }
