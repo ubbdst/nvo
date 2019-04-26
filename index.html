@@ -28,7 +28,8 @@
             param = window.location.href.slice(window.location.href.indexOf('?') + 1);
             }
         // code for IE
-        if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
+        if ( (Object.getOwnPropertyDescriptor && Object.getOwnPropertyDescriptor(window, "ActiveXObject")) || 
+    ("ActiveXObject" in window);) {
           var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.6.0");
           xslDoc.async = false;
           xslDoc.load("ordbok.xsl");
