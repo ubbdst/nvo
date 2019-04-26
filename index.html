@@ -41,7 +41,7 @@
           xslproc.addParameter("DOCUMENT_URL",domain + "?" + param);
           xslproc.input= xml;
           xslproc.transform();
-          console.log("hello" +resultoutput);
+          console.log("hello" + xml +"xsl" + xsl + "output" +resultoutput);
           var resultoutput = xslproc.output;
           document.getElementById("main").appendChild(resultoutput);
 
