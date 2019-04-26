@@ -36,7 +36,6 @@
           var xslproc;
           xslt.stylesheet = xsl;
           xslproc = xslt.createProcessor();
-          xslproc.importStylesheet(xsl);  
           xslproc.addParameter("DOCUMENT_NAME","/nvo/index.html");
           xslproc.addParameter("QPI",param);
           xslproc.addParameter("DOCUMENT_URL",domain + "?" + param);   
