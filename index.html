@@ -33,10 +33,9 @@
         // code for IE
         if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
           var xslt = new ActiveXObject("Msxml2.XSLTemplate.6.0");
-          xslt.stylesheet = xsl;
-          var xmlDoc = new ActiveXObject("Msxml2.XSLTemplate.6.0");
           var xslproc;  
-          xslproc = xslt.createProcessor();  
+          xslproc = xslt.createProcessor();
+          xslproc.importStylesheet(xsl);  
           xslproc.addParameter("DOCUMENT_NAME","/nvo/index.html");
           xslproc.addParameter("QPI",param);
           xslproc.addParameter("DOCUMENT_URL",domain + "?" + param);   
