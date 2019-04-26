@@ -18,9 +18,7 @@
         return xhttp.responseXML;
       }
 
-      function displayResult() {
-        xml = loadXMLDoc("index.xml");
-        
+      function displayResult() {        
         pos = window.location.href.indexOf('?');
           if (pos == -1) {
             domain = window.location.href;
@@ -31,9 +29,9 @@
             }
         // code for IE
         if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
-          var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.6.0");  
-          xslDoc.load("ordbok.xsl");
+          var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.6.0");
           xslDoc.async = false;
+          xslDoc.load("ordbok.xsl");
           var xslt = new ActiveXObject("Msxml2.XSLTemplate.6.0");
           var xslproc;
           xslt.stylesheet = xslDoc;
