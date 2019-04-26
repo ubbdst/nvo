@@ -25,7 +25,7 @@ perhaps .htaccess helped for the chapter links.
 ###conclusion: the document() function can't access the tegntabell.xml file, which is needed to convert uri-encoded characters in the search string.
 ###found a way to include the character table in this stylesheet. look for namespace 'my'
 -->
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
 xmlns:my="my:my">
     
     
