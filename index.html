@@ -34,7 +34,7 @@
           var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.6.0");
           xslDoc.async = false;
           xslDoc.setProperty('ProhibitDTD', false);
-          xslDoc.setProperty('ValidateOnParse',false);
+          xslDoc.validateOnParse = false;
           xslDoc.load("ordbok.xsl");
             if (xslDoc.parseError.errorCode != 0) {
          var myErr = xslDoc.parseError;
@@ -47,7 +47,7 @@
           var xmlDoc = new ActiveXObject("Msxml2.DOMDocument.6.0");  
           xmlDoc.async = false;  
           xmlDoc.setProperty('ProhibitDTD', false);
-          xslDoc.setProperty('ValidateOnParse',false);
+          xmlDoc.validateOnParse = false;
           xmlDoc.load("index.xml");  
 
           xslproc = xslt.createProcessor();
