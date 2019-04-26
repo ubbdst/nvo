@@ -50,16 +50,24 @@
           xmlDoc.validateOnParse = false;
           xmlDoc.load("index.xml");  
 
+         
+           if (xmlDoc.parseError.errorCode != 0) {
+      var myErr = xmlDoc.parseError;
+      WScript.Echo("You have error " + myErr.reason);
+   } else {
           xslproc = xslt.createProcessor();
           xslproc.addParameter("DOCUMENT_NAME","/nvo/index.html");
           xslproc.addParameter("QPI",param);
           xslproc.addParameter("DOCUMENT_URL",domain + "?" + param);
           xslproc.input= xmlDoc;
+          
           xslproc.transform();
           var resultoutput = xslproc.output;
+          
           document.getElementById("main").appendChild(resultoutput);
 
         }}
+        }
         else if (document.implementation && document.implementation.createDocument){
           // code for Chrome, Firefox, Opera, etc.
           xsltProcessor = new XSLTProcessor();
