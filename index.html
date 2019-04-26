@@ -33,7 +33,7 @@
         if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
           var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.6.0");  
           xslDoc.load("ordbok.xsl");
-          
+          xslDoc.async = false;
           var xslt = new ActiveXObject("Msxml2.XSLTemplate.6.0");
           var xslproc;
           xslt.stylesheet = xslDoc;
