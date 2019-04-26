@@ -29,7 +29,7 @@
           } else {
             domain = window.location.href.slice(0, window.location.href.indexOf('?'));
             param = window.location.href.slice(window.location.href.indexOf('?') + 1);
-            
+            }
         // code for IE
         if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
           var xslt = new ActiveXObject("Msxml2.XSLTemplate.6.0");
@@ -41,7 +41,8 @@
           xslt.addParameter("DOCUMENT_URL",domain + "?" + param);   
           var res = xslt.transformToFragment(xmlDoc,document);
           document.getElementById("main").innerHTML = res;
-        } else if (document.implementation && document.implementation.createDocument){
+        }
+        else if (document.implementation && document.implementation.createDocument){
           // code for Chrome, Firefox, Opera, etc.
           xsltProcessor = new XSLTProcessor();
           xsltProcessor.importStylesheet(xsl);
