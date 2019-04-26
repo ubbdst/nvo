@@ -32,16 +32,21 @@
             }
         // code for IE
         if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
+          var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.6.0");  
+          xslDoc.load("ordbok.xsl");
           var xslt = new ActiveXObject("Msxml2.XSLTemplate.6.0");
           var xslproc;
-          xslt.stylesheet = xsl;
+          xslt.stylesheet = xslDoc;
+          var xmlDoc = new ActiveXObject("Msxml2.DOMDocument.6.0");  
+          xmlDoc.async = false;  
+          xmlDoc.load("index.xml");  
+
           xslproc = xslt.createProcessor();
           xslproc.addParameter("DOCUMENT_NAME","/nvo/index.html");
           xslproc.addParameter("QPI",param);
           xslproc.addParameter("DOCUMENT_URL",domain + "?" + param);
-          xslproc.input= xml;
+          xslproc.input= xmlDoc;
           xslproc.transform();
-          console.log("hello" + xml + "xsl" + xsl + "output" + resultoutput);
           var resultoutput = xslproc.output;
           document.getElementById("main").appendChild(resultoutput);
 
