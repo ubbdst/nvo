@@ -35,15 +35,15 @@
           var xslt = new ActiveXObject("Msxml2.XSLTemplate.6.0");
           var xslproc;
           xslt.stylesheet = xsl;
-          console.log("xsl "+ xsl);
-          console.log("xml "+ xml);
+          alert("xsl "+ xsl);
+          alert("xml "+ xml);
           xslproc = xslt.createProcessor();
           xslproc.addParameter("DOCUMENT_NAME","/nvo/index.html");
           xslproc.addParameter("QPI",param);
           xslproc.addParameter("DOCUMENT_URL",domain + "?" + param);
           xslproc.input= xml;
           xslproc.transform();
-          console.log(xslproc.output);
+          alert(xslproc.output);
           document.getElementById("main").appendChild(xslproc.output);
 
         }
