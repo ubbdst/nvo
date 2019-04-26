@@ -39,7 +39,7 @@
           xslproc.addParameter("DOCUMENT_NAME","/nvo/index.html");
           xslproc.addParameter("QPI",param);
           xslproc.addParameter("DOCUMENT_URL",domain + "?" + param);
-          xslproc.input(xml);
+          xslproc.input= xml;
           xslProc.transform();
           var res = xslproc.transformToFragment(xml,document);
           document.getElementById("main").innerHTML = xslproc.output;
