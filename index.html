@@ -29,7 +29,7 @@
             }
         // code for IE
         if ( (Object.getOwnPropertyDescriptor && Object.getOwnPropertyDescriptor(window, "ActiveXObject")) || 
-    ("ActiveXObject" in window);) {
+    ("ActiveXObject" in window)) {
           var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument.6.0");
           xslDoc.async = false;
           xslDoc.load("ordbok.xsl");
