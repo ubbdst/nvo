@@ -64,7 +64,7 @@
           xslproc.transform();
           var resultoutput = xslproc.output;
           console.log(resultoutput);
-          document.getElementById("main").appendChild(resultoutput);
+          document.getElementById("main").innerhtml += resultoutput; 
 
         }}
         }
