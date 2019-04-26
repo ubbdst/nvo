@@ -29,7 +29,7 @@ perhaps .htaccess helped for the chapter links.
 xmlns:my="my:my">
     
     
-<xsl:output method="html" doctype-public="-//W3C/DTD XHTML 1.0 STRICT//EN" encoding="UTF-8"></xsl:output>
+<xsl:output method="html" doctype-public="-//W3C/DTD XHTML 1.0 STRICT//EN" doctype-system="http://www.w3.org/TR/xhtml1-strict.dtd" encoding="UTF-8"></xsl:output>
 
 <!-- The xsl:strip-space element is used to prevent superflous spaces in the xml encoding from being displayed in the output HTML file -->    
 <!-- Since necessary spaces are stripped from the file, some of the templates below contain functions that add spaces in relevant places (see templates for w, punct, unclear and supplied) -->    
