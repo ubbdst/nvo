@@ -56,7 +56,7 @@
           xslproc.addParameter("DOCUMENT_URL",domain + "?" + param);
           xslproc.input= xmlDoc;
           xslproc.transform();
-          var resultoutput = xslproc.output.innerhtml;
+          var resultoutput = xslproc.output;
           document.getElementById("main").appendChild(resultoutput);
 
         }}
