@@ -33,7 +33,8 @@
         // code for IE
         if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
           var xslt = new ActiveXObject("Msxml2.XSLTemplate.6.0");
-          var xslproc;  
+          var xslproc;
+          xslt.stylesheet = xsl;
           xslproc = xslt.createProcessor();
           xslproc.importStylesheet(xsl);  
           xslproc.addParameter("DOCUMENT_NAME","/nvo/index.html");
