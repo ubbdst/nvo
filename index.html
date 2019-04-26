@@ -35,6 +35,8 @@
           var xslt = new ActiveXObject("Msxml2.XSLTemplate.6.0");
           var xslproc;
           xslt.stylesheet = xsl;
+          console.log("xsl "+ xsl);
+          console.log("xml "+ xml);
           xslproc = xslt.createProcessor();
           xslproc.addParameter("DOCUMENT_NAME","/nvo/index.html");
           xslproc.addParameter("QPI",param);
@@ -42,7 +44,8 @@
           xslproc.input= xml;
           xslproc.transform();
           console.log(xslproc.output);
-          document.getElementById("main").innerHTML = xslproc.output;
+          document.getElementById("main").appendChild(xslproc.output);
+
         }
         else if (document.implementation && document.implementation.createDocument){
           // code for Chrome, Firefox, Opera, etc.
