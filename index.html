@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script>
+
+      function loadXMLDoc(filename) {
+        if (window.ActiveXObject) {
+          xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+        } else {
+          xhttp = new XMLHttpRequest();
+        }
+        xhttp.open("GET", filename, false);
+        try {
+          xhttp.responseType = "msxml-document"
+        } catch(err) {
+        } // Helping IE11
+        xhttp.send("");
+        return xhttp.responseXML;
+      }
+
+      function displayResult() {
+        xml = loadXMLDoc("index.xml");
+        xsl = loadXMLDoc("ordbok.xsl");
+        
+        pos = window.location.href.indexOf('?');
+          if (pos == -1) {
+            domain = window.location.href;
+            param = "";
+          } else {
+            domain = window.location.href.slice(0, window.location.href.indexOf('?'));
+            param = window.location.href.slice(window.location.href.indexOf('?') + 1);
+            
+        // code for IE
+        if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
+          var xslt = new ActiveXObject("Msxml2.XSLTemplate.6.0");
+          xslt.stylesheet = xsl;
+          var xmlDoc = new ActiveXObject("Msxml2.XSLTemplate.6.0");
+          xmlDoc.load(xml);
+          xslt.addParameter("DOCUMENT_NAME","/nvo/index.html");
+          xslt.addParameter("QPI",param);
+          xslt.addParameter("DOCUMENT_URL",domain + "?" + param);   
+          var res = xslt.transformToFragment(xmlDoc,document);
+          document.getElementById("main").innerHTML = res;
+        } else if (document.implementation && document.implementation.createDocument){
+          // code for Chrome, Firefox, Opera, etc.
+          xsltProcessor = new XSLTProcessor();
+          xsltProcessor.importStylesheet(xsl);
+
+          // disse funker
+          //xsltProcessor.setParameter(null, "QPI", "bokstav=U");
+          //xsltProcessor.setParameter(null, "QPI", "ord=bue");
+
+          pos = window.location.href.indexOf('?');
+          if (pos == -1) {
+            domain = window.location.href;
+            param = "";
+          } else {
+            domain = window.location.href.slice(0, window.location.href.indexOf('?'));
+            param = window.location.href.slice(window.location.href.indexOf('?') + 1);
+          }
+          xsltProcessor.setParameter(null, "DOCUMENT_NAME", "/nvo/index.html");
+          xsltProcessor.setParameter(null, "QPI", param);
+          xsltProcessor.setParameter(null, "DOCUMENT_URL", domain + "?" + param);
+
+          resultDocument = xsltProcessor.transformToFragment(xml, document);
+          document.getElementById("main").appendChild(resultDocument);
+        }
+
+      }
+    </script>
+  </head>
+  <body onload="displayResult()">
+    <div id="main">
+    </div>
+  </body>
+</html>
+
